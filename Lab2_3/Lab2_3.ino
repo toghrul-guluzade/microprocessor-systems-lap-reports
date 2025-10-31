@@ -24,12 +24,11 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   Serial.print("\nResult: ");
   Serial.print(result);
   Serial.print("\nZERO Flag: ");
   Serial.print((SREG_value >> 1) & 1);
-  Serial.print("\nCARY Flag: ");
+  Serial.print("\nCARRY Flag: ");
   Serial.print((SREG_value) & 1);
   delay(5000);
 

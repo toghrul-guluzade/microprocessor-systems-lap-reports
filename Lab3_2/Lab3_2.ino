@@ -9,10 +9,10 @@ void setup() {
     "LDI R18, 0 \n\t" // SUM
 
     "LOOP: \n\t"
-    " INC R16 \n\t"
-    " ADD R18, R16 \n\t"
-    " CP R16, R17 \n\t"
-    " BRLT LOOP \n\t"
+    " INC R16 \n\t" //Increment accumulator
+    " ADD R18, R16 \n\t" //add operation
+    " CP R16, R17 \n\t" //compare accumulator with max limit
+    " BRLT LOOP \n\t" //loop back if it hasn't reach to the limit yet
     "MOV %0, R18 \n\t"
     : "=r"(result)
 
@@ -22,7 +22,7 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // print
   Serial.print(result);
   delay(3000);
 
